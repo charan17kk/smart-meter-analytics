@@ -12,8 +12,12 @@ st.set_page_config(
 
 
 # FastAPI URL
-API_URL = "http://127.0.0.1:8000"
+import os
 
+API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8000"
+)
 
 # Title
 st.title("⚡ Smart Meter Analytics Platform")
